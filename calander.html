@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Calendar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url("https://media.istockphoto.com/id/1341408852/video/colored-smoke-on-a-dark-background-blue-and-red-light-with-smoke.jpg?s=640x640&k=20&c=v2DQUY8IVbli_6FH_9KAs6YWRXlDdYiBJHfp7JFh7NY=");
+            background-size: cover;
+        }
+
+        #calendar {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 10px;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+
+        .day {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+
+        .event {
+            background-color: #3498db;
+            color: white;
+            padding: 5px;
+            margin-bottom: 2px;
+            font-size: 12px;
+        }
+
+        #month-year {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        button {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="month-year"></div>
+    <div id="calendar"></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const calendar = document.getElementById('calendar');
+            const monthYearDisplay = document.getElementById('month-year');
+            const currentDate = new Date();
+            let currentMonth = currentDate.getMonth();
+            let currentYear = currentDate.getFullYear();
+
+            function renderCalendar() {
+                // Clear previous content
+                calendar.innerHTML = "";
+                monthYearDisplay.textContent = `${getMonthName(currentMonth)} ${currentYear}`;
+
+                // Get the first day of the month
+                const firstDay = new Date(currentYear, currentMonth, 1).getDay();
+
+                // Get the last day of the month
+                const lastDay = new Date(currentYear, currentMonth + 1, 0).getDate();
+
+                // Fill in empty cells before the first day
+                for (let i = 0; i < firstDay; i++) {
+                    const emptyCell = document.createElement('div');
+                    emptyCell.classList.add('day');
+                    calendar.appendChild(emptyCell);
+                }
+
+                // Fill in days of the month
+                for (let day = 1; day <= lastDay; day++) {
+                    const dayCell = document.createElement('div');
+
+
+                    dayCell.classList.add('day');
+                    dayCell.textContent = day;
+                    calendar.appendChild(dayCell);
+                    
+                    // Example: Add events to specific days (Modify as needed)
+                    if (day === 5) {
+                        const event = document.createElement('div');
+                        event.classList.add('event');
+                        event.textContent = 'Event on this day!';
+                        dayCell.appendChild(event);
+                    }
+                }
+            }
+
+            function getMonthName(month) {
+                const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+                return months[month];
+            }
+
+            function nextMonth() {
+                if (currentMonth === 11) {
+                    
+                    currentYear++;
+                } else {
+                    currentMonth++;
+                }
+                renderCalendar();
+            }
+
+            function prevMonth() {
+                if (currentMonth === 0) {
+                    currentMonth = 11;
+                    currentYear--;
+                } else {
+                    currentMonth--;
+                }
+                renderCalendar();
+            }
+
+            renderCalendar();
+
+            // Add event listeners to the buttons
+            document.getElementById('prev-btn').addEventListener('click', prevMonth);
+            document.getElementById('next-btn').addEventListener('click', nextMonth);
+        });
+    </script>
+
+    <button id="prev-btn">Previous Month</button>
+    <button id="next-btn">Next Month</button>
+
+</body>
+</html>

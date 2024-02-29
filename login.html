@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body{
+    font-family:'Courier New', Courier, monospace;
+    margin: 200px;
+    background-image: url("https://files.oaiusercontent.com/file-VqGYbe1cBLx7vYJ1zr0Wg3pc?se=2024-02-29T07%3A10%3A10Z&sp=r&sv=2021-08-06&sr=b&rscc=max-age%3D31536000%2C%20immutable&rscd=attachment%3B%20filename%3Db4fd8365-809c-4535-ad51-14140647c4de.webp&sig=WTm0DEIWnKTkQf28xnUff7LwWTKgOE3dfd6VJGRz/iw%3D");
+    background-size: cover;
+}
+
+  .navbar {
+    overflow: hidden;
+    background-color: none;
+    font-size: x-large;
+  }
+  .navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    margin-left: 80px;
+    border-radius: 25px;
+  }
+  .navbar a:hover {
+    background-color: #ddd;
+    color: black;
+    border-radius: 25px;
+  }
+  .container {
+    width: 400px;
+    padding: 16px;
+    background-color: rgba(255, 255, 255, 0.8);
+    margin: 0 auto;
+    margin-top: 100px;
+    border: 1px solid black;
+    border-radius: 25px;
+  }
+  input[type=text], input[type=password] {
+    width: 80%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+  }
+  button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+  }
+  button:hover {
+    opacity:1;
+  }
+
+    </style>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>project</title>
+   <link rel="stylesheet" href="style__1.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+ <div class="container" id="loginForm">
+   <label for="uname"><b>Roll Number</b></label>
+   <input type="text" placeholder="Enter Roll Number" name="uname" required>
+ 
+   <label for="psw"><b>Password</b></label>
+   <input type="password" placeholder="Enter Password" name="psw" required>
+ 
+   <button type="submit">Login</button>
+ </div>
+ 
+ <div class="container" id="signupForm" style="display: none;">
+   <label for="uname"><b>Username</b></label>
+   <input type="text" placeholder="Enter Username" name="uname" required>
+ 
+   <label for="psw"><b>Password</b></label>
+   <input type="password" placeholder="Enter Password" name="psw" required>
+ 
+ 
+ 
+ <script src="app.js"></script> 
+</body>
+</html>

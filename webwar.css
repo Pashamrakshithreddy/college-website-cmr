@@ -1,0 +1,198 @@
+/* Reset some default styles */
+body, ul {
+    margin: 0;
+    padding: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.image{
+    background-image: url("https://images.shiksha.com/mediadata/images/1547211911phptODUbj_g.jpg");
+    background-size: cover;
+}
+
+/* body{
+    background-image: url("https://files.oaiusercontent.com/file-VqGYbe1cBLx7vYJ1zr0Wg3pc?se=2024-02-29T07%3A10%3A10Z&sp=r&sv=2021-08-06&sr=b&rscc=max-age%3D31536000%2C%20immutable&rscd=attachment%3B%20filename%3Db4fd8365-809c-4535-ad51-14140647c4de.webp&sig=WTm0DEIWnKTkQf28xnUff7LwWTKgOE3dfd6VJGRz/iw%3D");
+    background-size: cover;
+} */
+
+/* Style the navbar */
+a{
+    font-weight: bold;
+}
+.navbar1{
+    background-color: #041f47;
+    overflow: hidden;
+}
+
+/* Navbar links list */
+.nav-links1{
+    list-style-type: none;
+    display: flex;
+    width: 1000px;
+    padding-left: 80px;
+    margin-left: 40px;
+}
+
+/* Style each link */
+.nav-links1 li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+/* Change the background on hover */
+.nav-links1 li a:hover {
+    background-color:  #e7770d;
+    border-radius: 20px;
+}
+
+.navbar2{
+    background-color: #e7770d;
+    overflow: hidden;
+}
+
+/* Navbar links list */
+.nav-links2{
+    list-style-type: none;
+    display: flex;
+}
+
+/* Style each link */
+.nav-links2 li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+/* Change the background on hover */
+.nav-links2 li a:hover {
+    background-color: #041f47;
+    border-radius: 20px;
+}
+
+.image{
+    height: 400px;
+    width: 100%;
+}
+
+body, ul {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #333;
+    overflow: hidden;
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.nav-links li a:hover, .dropdown:hover .dropbtn {
+    background-color: #000000;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #555;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #000000;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.about-section {
+    padding: 50px;
+    text-align: center;
+    background-color: #474e5d;
+    color: white;
+    border-radius: 25px;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+
+  .row {
+    display: flex;
+  }
+
+  .column {
+    flex: 33.33%;
+    padding: 5px;
+  }
+
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 8px;
+    border-radius: 25px;
+  }
+
+  .card img {
+    width: 100%;
+  }
+
+  .card .container {
+    padding: 10px;
+  }
+
+  .title {
+    color: grey;
+  }
+
+  .button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+  }
+  .button{
+      border-radius: 25px;
+      width: 100px;
+      
+  }
+
+  .button:hover {
+    background-color: #555;
+  }
